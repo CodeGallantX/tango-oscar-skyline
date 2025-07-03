@@ -13,6 +13,8 @@ import Profile from "./pages/Profile";
 import Security from "./pages/Security";
 import Concierge from "./pages/Concierge";
 import Settings from "./pages/Settings";
+import Charter from "./pages/Charter";
+import Chauffeur from "./pages/Chauffeur";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +35,8 @@ const App = () => (
             <Route path="profile" element={<Profile />} />
             <Route path="security" element={<Security />} />
             <Route path="concierge" element={<Concierge />} />
+            <Route path="charter" element={<Charter />} />
+            <Route path="chauffeur" element={<Chauffeur />} />
             <Route path="settings" element={<Settings />} />
           </Route>
           <Route path="*" element={<NotFound />} />

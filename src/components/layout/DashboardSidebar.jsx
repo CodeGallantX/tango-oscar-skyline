@@ -10,7 +10,8 @@ import {
   Shield, 
   Headphones, 
   Settings,
-  Plane
+  Plane,
+  Car
 } from "lucide-react";
 import {
   Sidebar,
@@ -29,6 +30,8 @@ const menuItems = [
   { title: "Dashboard", url: "/dashboard", icon: Home },
   { title: "Bookings", url: "/dashboard/bookings", icon: Calendar },
   { title: "Booking History", url: "/dashboard/booking-history", icon: History },
+  { title: "Private Jet Charter", url: "/dashboard/charter", icon: Plane },
+  { title: "Luxury Chauffeur", url: "/dashboard/chauffeur", icon: Car },
   { title: "Payments", url: "/dashboard/payments", icon: CreditCard },
   { title: "Profile", url: "/dashboard/profile", icon: User },
   { title: "Security Settings", url: "/dashboard/security", icon: Shield },
