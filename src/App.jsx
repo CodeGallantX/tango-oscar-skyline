@@ -12,8 +12,6 @@ import Payments from "./pages/Payments";
 import Profile from "./pages/Profile";
 import Security from "./pages/Security";
 import Concierge from "./pages/Concierge";
-import Charter from "./pages/Charter";
-import Chauffeur from "./pages/Chauffeur";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
@@ -35,8 +33,6 @@ const App = () => (
             <Route path="profile" element={<Profile />} />
             <Route path="security" element={<Security />} />
             <Route path="concierge" element={<Concierge />} />
-            <Route path="charter" element={<Charter />} />
-            <Route path="chauffeur" element={<Chauffeur />} />
             <Route path="settings" element={<Settings />} />
           </Route>
           <Route path="*" element={<NotFound />} />

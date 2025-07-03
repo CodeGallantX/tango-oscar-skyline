@@ -31,7 +31,7 @@ const Concierge = () => {
     date: "",
     details: "",
     budget: "",
-    priority: "medium"
+    priority: "Medium"
   });
 
   const [requests] = useState([
@@ -100,7 +100,7 @@ const Concierge = () => {
       date: "",
       details: "",
       budget: "",
-      priority: "medium"
+      priority: "Medium"
     });
   };
 
@@ -226,10 +226,10 @@ const Concierge = () => {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-card/95 backdrop-blur-md border-border/50">
-                      <SelectItem value="low">Low</SelectItem>
-                      <SelectItem value="medium">Medium</SelectItem>
-                      <SelectItem value="high">High</SelectItem>
-                      <SelectItem value="urgent">Urgent</SelectItem>
+                      <SelectItem value="Low">Low</SelectItem>
+                      <SelectItem value="Medium">Medium</SelectItem>
+                      <SelectItem value="High">High</SelectItem>
+                      <SelectItem value="Urgent">Urgent</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
