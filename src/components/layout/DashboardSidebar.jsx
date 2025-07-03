@@ -1,6 +1,5 @@
 
-import { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { 
   Home, 
   Calendar, 
@@ -10,7 +9,10 @@ import {
   Shield, 
   Headphones, 
   Settings,
-  Plane
+  Plane,
+  Car,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 import {
   Sidebar,
@@ -24,23 +26,24 @@ import {
   SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { Button } from "@/components/ui/button";
 
 const menuItems = [
   { title: "Dashboard", url: "/dashboard", icon: Home },
+  { title: "Private Jet Charter", url: "/dashboard/charter", icon: Plane },
+  { title: "Luxury Chauffeur", url: "/dashboard/chauffeur", icon: Car },
   { title: "Bookings", url: "/dashboard/bookings", icon: Calendar },
   { title: "Booking History", url: "/dashboard/booking-history", icon: History },
   { title: "Payments", url: "/dashboard/payments", icon: CreditCard },
   { title: "Profile", url: "/dashboard/profile", icon: User },
-  { title: "Security Settings", url: "/dashboard/security", icon: Shield },
+  { title: "VVIP Security", url: "/dashboard/security", icon: Shield },
   { title: "Concierge", url: "/dashboard/concierge", icon: Headphones },
   { title: "Settings", url: "/dashboard/settings", icon: Settings },
 ];
 
 const DashboardSidebar = () => {
-  const { collapsed } = useSidebar();
-  const location = useLocation();
-
-  const isActive = (path) => location.pathname === path;
+  const { state, toggleSidebar } = useSidebar();
+  const collapsed = state === "collapsed";
 
   return (
     <Sidebar className={collapsed ? "w-18" : "w-64"} collapsible>
@@ -62,7 +65,7 @@ const DashboardSidebar = () => {
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-bronze/80 text-xs font-semibold tracking-wider">
-            NAVIGATION
+            SERVICES
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -88,6 +91,25 @@ const DashboardSidebar = () => {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+
+        {/* Collapse Button */}
+        <div className="mt-auto p-4 border-t border-sidebar-border">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleSidebar}
+            className="w-full justify-center text-sidebar-foreground hover:text-bronze hover:bg-sidebar-accent"
+          >
+            {collapsed ? (
+              <ChevronRight className="w-4 h-4" />
+            ) : (
+              <>
+                <ChevronLeft className="w-4 h-4 mr-2" />
+                Collapse
+              </>
+            )}
+          </Button>
+        </div>
       </SidebarContent>
       
       {/* Mobile trigger */}
