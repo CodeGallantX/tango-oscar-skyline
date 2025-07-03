@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -156,7 +155,7 @@ const Charter = () => {
                     <SelectItem value="5-8">5-8 Passengers</SelectItem>
                     <SelectItem value="9-12">9-12 Passengers</SelectItem>
                     <SelectItem value="13-16">13-16 Passengers</SelectItem>
-                    <SelectItem value="17+">17+ Passengers</SelectItem>
+                    <SelectItem value="17-plus">17+ Passengers</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

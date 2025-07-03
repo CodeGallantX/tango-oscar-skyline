@@ -217,7 +217,7 @@ const Concierge = () => {
                         <SelectItem value="3-5">3-5 Guests</SelectItem>
                         <SelectItem value="6-10">6-10 Guests</SelectItem>
                         <SelectItem value="11-20">11-20 Guests</SelectItem>
-                        <SelectItem value="20+">20+ Guests</SelectItem>
+                        <SelectItem value="20-plus">20+ Guests</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -232,7 +232,7 @@ const Concierge = () => {
                         <SelectItem value="25k-50k">$25k - $50k</SelectItem>
                         <SelectItem value="50k-100k">$50k - $100k</SelectItem>
                         <SelectItem value="100k-250k">$100k - $250k</SelectItem>
-                        <SelectItem value="250k+">$250k+</SelectItem>
+                        <SelectItem value="250k-plus">$250k+</SelectItem>
                         <SelectItem value="no-limit">No Limit</SelectItem>
                       </SelectContent>
                     </Select>
