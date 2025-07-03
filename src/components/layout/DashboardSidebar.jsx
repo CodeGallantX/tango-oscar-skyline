@@ -51,13 +51,10 @@ const DashboardSidebar = () => {
         {/* Logo Section */}
         <div className="p-6 border-b border-sidebar-border">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-bronze rounded-lg flex items-center justify-center">
-              <img src="https://tango-oscar.vercel.app/logo.png" alt="logo"/>
-            </div>
+              
             {!collapsed && (
-              <div>
-                <h2 className="text-lg font-bold text-bronze">Tango Oscar</h2>
-                <p className="text-xs text-sidebar-foreground/60">VVIP Charter</p>
+              <div className="w-24 md:w-36">
+                <img src="https://tango-oscar.vercel.app/logo.png" alt="logo" className="w-full h-full object-cover"/>
               </div>
             )}
           </div>
