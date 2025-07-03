@@ -52,7 +52,7 @@ const DashboardSidebar = () => {
         <div className="p-6 border-b border-sidebar-border">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-bronze rounded-lg flex items-center justify-center">
-              <img src="https://tango-oscar.vercel.app/logo.png" alt="logo">
+              <img src="https://tango-oscar.vercel.app/logo.png" alt="logo"/>
             </div>
             {!collapsed && (
               <div>
