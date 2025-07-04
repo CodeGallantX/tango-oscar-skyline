@@ -214,6 +214,9 @@ const Chauffeur = () => {
           {vehicleFleet.map((vehicle) => (
             <Card key={vehicle.id} className="bg-black/50 border-bronze/20 backdrop-blur-sm">
               <CardHeader>
+                <div className="w-full rounded-lg">
+                  <img src="https://images.ctfassets.net/lmiyf1b7ib63/5rollsroycephanto-image/95f418b02d5e7c232389f9fe7f59fd3e/5rollsroycephanto-image.jpeg" alt={`${vehicle.name} - Tango Oscar`} className="w-full h-full object-fit rounded-lg" />
+                </div>
                 <div className="flex justify-between items-start">
                   <div>
                     <CardTitle className="text-bronze text-lg">{vehicle.name}</CardTitle>
