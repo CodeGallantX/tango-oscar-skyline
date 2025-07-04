@@ -160,7 +160,7 @@ const BookingHistory = () => {
                   <SelectValue placeholder="All Years" />
                 </SelectTrigger>
                 <SelectContent className="bg-card/95 backdrop-blur-md border-border/50">
-                  <SelectItem value="">All Years</SelectItem>
+                  <SelectItem value="all">All Years</SelectItem>
                   <SelectItem value="2024">2024</SelectItem>
                   <SelectItem value="2023">2023</SelectItem>
                   <SelectItem value="2022">2022</SelectItem>
@@ -175,7 +175,7 @@ const BookingHistory = () => {
                   <SelectValue placeholder="All Aircraft" />
                 </SelectTrigger>
                 <SelectContent className="bg-card/95 backdrop-blur-md border-border/50">
-                  <SelectItem value="">All Aircraft</SelectItem>
+                  <SelectItem value="all">All Aircraft</SelectItem>
                   <SelectItem value="Gulfstream G650">Gulfstream G650</SelectItem>
                   <SelectItem value="Bombardier Global 7500">Bombardier Global 7500</SelectItem>
                   <SelectItem value="Falcon 7X">Falcon 7X</SelectItem>

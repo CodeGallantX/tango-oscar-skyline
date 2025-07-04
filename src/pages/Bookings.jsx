@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -21,9 +20,9 @@ import { useToast } from "@/hooks/use-toast";
 
 const Bookings = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filterAircraft, setFilterAircraft] = useState("");
+  const [filterAircraft, setFilterAircraft] = useState("all");
   const [filterDate, setFilterDate] = useState("");
-  const [filterDestination, setFilterDestination] = useState("");
+  const [filterDestination, setFilterDestination] = useState("all");
   const { toast } = useToast();
 
   const [bookings] = useState([
@@ -66,9 +65,9 @@ const Bookings = () => {
     const matchesSearch = booking.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          booking.departure.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          booking.destination.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesAircraft = !filterAircraft || booking.aircraft === filterAircraft;
+    const matchesAircraft = filterAircraft === "all" || booking.aircraft === filterAircraft;
     const matchesDate = !filterDate || booking.date === filterDate;
-    const matchesDestination = !filterDestination || booking.destination === filterDestination;
+    const matchesDestination = filterDestination === "all" || booking.destination === filterDestination;
     
     return matchesSearch && matchesAircraft && matchesDate && matchesDestination;
   });
@@ -140,7 +139,7 @@ const Bookings = () => {
                   <SelectValue placeholder="All Aircraft" />
                 </SelectTrigger>
                 <SelectContent className="bg-card/95 backdrop-blur-md border-border/50">
-                  <SelectItem value="">All Aircraft</SelectItem>
+                  <SelectItem value="all">All Aircraft</SelectItem>
                   <SelectItem value="Gulfstream G650">Gulfstream G650</SelectItem>
                   <SelectItem value="Bombardier Global 7500">Bombardier Global 7500</SelectItem>
                   <SelectItem value="Falcon 7X">Falcon 7X</SelectItem>
@@ -166,7 +165,7 @@ const Bookings = () => {
                   <SelectValue placeholder="All Destinations" />
                 </SelectTrigger>
                 <SelectContent className="bg-card/95 backdrop-blur-md border-border/50">
-                  <SelectItem value="">All Destinations</SelectItem>
+                  <SelectItem value="all">All Destinations</SelectItem>
                   <SelectItem value="LAX">Los Angeles (LAX)</SelectItem>
                   <SelectItem value="LHR">London (LHR)</SelectItem>
                   <SelectItem value="CDG">Paris (CDG)</SelectItem>

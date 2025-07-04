@@ -204,7 +204,7 @@ const Payments = () => {
                   <SelectValue placeholder="All Statuses" />
                 </SelectTrigger>
                 <SelectContent className="bg-card/95 backdrop-blur-md border-border/50">
-                  <SelectItem value="">All Statuses</SelectItem>
+                  <SelectItem value="all">All Statuses</SelectItem>
                   <SelectItem value="Paid">Paid</SelectItem>
                   <SelectItem value="Pending">Pending</SelectItem>
                   <SelectItem value="Failed">Failed</SelectItem>
@@ -219,7 +219,7 @@ const Payments = () => {
                   <SelectValue placeholder="All Methods" />
                 </SelectTrigger>
                 <SelectContent className="bg-card/95 backdrop-blur-md border-border/50">
-                  <SelectItem value="">All Methods</SelectItem>
+                  <SelectItem value="all">All Methods</SelectItem>
                   <SelectItem value="American Express">American Express</SelectItem>
                   <SelectItem value="Wire Transfer">Wire Transfer</SelectItem>
                   <SelectItem value="Chase Sapphire">Chase Sapphire</SelectItem>
