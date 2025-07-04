@@ -191,6 +191,9 @@ const Charter = () => {
           {aircraftFleet.map((aircraft) => (
             <Card key={aircraft.id} className="bg-black/50 border-bronze/20 backdrop-blur-sm">
               <CardHeader>
+                <div className="w-full my-2 rounded-lg">
+                  <img src="https://resources.globalair.com/specs/images/GulfstreamG650_Exterior.webp" alt="Jet Image" className="w-full h-full object-fit rounded-lg" />
+                </div>
                 <div className="flex justify-between items-start">
                   <div>
                     <CardTitle className="text-bronze">{aircraft.name}</CardTitle>
