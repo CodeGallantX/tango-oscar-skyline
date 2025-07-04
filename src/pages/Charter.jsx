@@ -22,6 +22,7 @@ const Charter = () => {
       id: "gulfstream-g650",
       name: "Gulfstream G650",
       category: "Ultra Long Range",
+      img: "https://resources.globalair.com/specs/images/GulfstreamG650_Exterior.webp",
       passengers: "14-19",
       range: "7,000 nm",
       speed: "Mach 0.925",
@@ -32,6 +33,7 @@ const Charter = () => {
       id: "bombardier-global-7500",
       name: "Bombardier Global 7500",
       category: "Ultra Long Range", 
+      img: "https://globaljet.aero/sites/default/files/2024-01/Bombardier%20Global%207500_Exterior%201_updated%20%5B1600x1200%5D.jpg",
       passengers: "14-19",
       range: "7,700 nm",
       speed: "Mach 0.925",
@@ -42,6 +44,7 @@ const Charter = () => {
       id: "citation-x",
       name: "Cessna Citation X+",
       category: "Super Mid Size",
+      img: "https://globaljet.aero/sites/default/files/2021-01/Cessna%20Citation%20X%20Exterior.jpg",
       passengers: "8-12",
       range: "3,460 nm", 
       speed: "Mach 0.935",
@@ -52,6 +55,7 @@ const Charter = () => {
       id: "falcon-7x",
       name: "Dassault Falcon 7X",
       category: "Heavy Jet",
+      img: "https://globaljet.aero/sites/default/files/2025-05/Dassault%20Falcon%207X_sn096_Exterior%203%20%5B1600x1200%5D.jpg",
       passengers: "12-16",
       range: "5,950 nm",
       speed: "Mach 0.90",
@@ -191,8 +195,8 @@ const Charter = () => {
           {aircraftFleet.map((aircraft) => (
             <Card key={aircraft.id} className="bg-black/50 border-bronze/20 backdrop-blur-sm">
               <CardHeader>
-                <div className="w-full my-2 rounded-lg">
-                  <img src="https://resources.globalair.com/specs/images/GulfstreamG650_Exterior.webp" alt={`${aircraft.name} - Tango Oscar`} className="w-full h-full object-fit rounded-lg" />
+                <div className="w-full h-56 md:h-80 my-2 rounded-lg">
+                  <img src={aircraft.img} alt={`${aircraft.name} - Tango Oscar`} className="w-full h-full object-fit rounded-lg" />
                 </div>
                 <div className="flex justify-between items-start">
                   <div>
