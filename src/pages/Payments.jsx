@@ -335,7 +335,7 @@ const Payments = () => {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Wallets Carousel Section */}
-      <div className="relative">
+      <div className="relative mx-4">
         {wallets.length > 1 && (
           <>
             <Button 
@@ -372,11 +372,11 @@ const Payments = () => {
           {wallets.map((wallet, index) => (
             <div 
               key={wallet.id} 
-              className="flex-shrink-0 snap-center w-full sm:w-4/5 md:w-2/3 lg:w-1/2 xl:w-1/3 px-2"
+              className="flex-shrink-0 snap-center w-4/5 sm:w-3/5 md:w-3/5 lg:w-1/2 xl:w-1/3 px-2"
             >
-              <Card className="glass-card h-full">
-                <CardHeader className="flex flex-row justify-between items-center">
-                  <div className="flex items-center gap-3">
+              <Card className={`glass-card h-full mt-2 ${index === activeWalletIndex ? 'ring-2 ring-bronze' : ''}`}>
+                <CardHeader className="flex flex-col sm:flex-row justify-start sm:justify-between item-start sm:items-center">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                     <Wallet className="w-6 h-6 text-bronze" />
                     <div>
                       <CardTitle className="text-bronze">{wallet.name}</CardTitle>
